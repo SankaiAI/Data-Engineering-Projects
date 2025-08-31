@@ -1,0 +1,103 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2">
+  <diagram name="Page-1" id="8APdK_Uyskl7J0zscZj2">
+    <mxGraphModel dx="983" dy="586" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-1" value="Bronze Layer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="200" y="220" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-2" value="Silver Layer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="400" y="220" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-3" value="Gold Layer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF1D;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="600" y="220" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-4" value="Definition" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="270" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-5" value="Objective" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="340" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-6" value="Object Type" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="410" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-7" value="Load Method" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="480" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-8" value="Data Transformation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="550" width="80" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-9" value="Data Modeling" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="640" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-10" value="Raw, unprocessed data as-is from sources" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="270" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-11" value="Clean &amp;amp; standardized data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="270" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-12" value="Business-Ready data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="270" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-13" value="Traceability &amp;amp; Debugging" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="340" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-14" value="(Intermediate Layer)&lt;div&gt;Prepare Data for Analysis&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="340" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-15" value="Provide data to be consumed for reporting &amp;amp; Analytics" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="340" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-16" value="Tables" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="410" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-17" value="Tables" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="410" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-18" value="Tables" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="410" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-19" value="Full Load&lt;div&gt;(Truncate &amp;amp; Insert)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="480" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-20" value="Full Load&lt;div&gt;(Truncate &amp;amp; Insert)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="480" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-21" value="None" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="480" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-22" value="None (as-is)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="550" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-23" value="-Data Cleaning&lt;div&gt;-Data Standardization&lt;/div&gt;&lt;div&gt;-Data Normalization&lt;/div&gt;&lt;div&gt;-Derived Columns&lt;/div&gt;&lt;div&gt;-Data Enrichment&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="550" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-24" value="-Data Integration&lt;div&gt;-Data Aggregation&lt;/div&gt;&lt;div&gt;-Business Logic &amp;amp; Rules&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="550" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-25" value="None (as-is)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="640" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-26" value="None (as-is)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="640" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-27" value="-Start Schema&lt;div&gt;-Aggregated Objects&lt;/div&gt;&lt;div&gt;-Flat Tables&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="640" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-28" value="Target Audience" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="90" y="700" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-29" value="-Data Engineers" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="700" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-30" value="-Data Engineers&lt;div&gt;-Data Analysts&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="700" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3K4ubDJ02upT8uLrB4JP-31" value="-Business Users&lt;div&gt;-Data Analysts&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="700" width="170" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
