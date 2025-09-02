@@ -21,6 +21,22 @@ Marketo (Simulated) → Kafka (KRaft) → Stream Processing → Data Lake (MinIO
 5. **Data Warehouse**: Snowflake for analytics-ready data
 6. **Caching**: Redis for deduplication and temporary storage
 
+## 🏗️ ETL Workflow Architecture
+
+<div align="center">
+  <img src="docs/Workflow.drawio.png" alt="Complete ETL Workflow from Marketo to Snowflake" width="900">
+  <br>
+  <em>End-to-end data pipeline showing the flow from Marketo data generation through Kafka streaming, real-time processing, data lake storage, and final loading to Snowflake data warehouse</em>
+</div>
+
+The diagram illustrates the complete data journey:
+- **📊 Data Source**: Marketo simulator generates leads, activities, and opportunities
+- **🔄 Kafka Streaming**: Messages flow through dedicated topics with schema validation
+- **⚡ Stream Processing**: Real-time enrichment, scoring, and Redis caching
+- **💾 Data Lake**: Time-partitioned storage in MinIO with Parquet format
+- **🏢 Data Warehouse**: Dimensional tables in Snowflake for analytics
+- **📈 Monitoring**: Control Center and structured logging throughout
+
 ## 📁 Project Structure
 
 ```
@@ -199,15 +215,6 @@ Modern:       Kafka Brokers with integrated controller (simple)
 ## 📸 System in Action
 
 The following screenshots demonstrate the pipeline processing real Marketo data in real-time:
-
-### **🏗️ ETL Workflow Architecture**
-<div align="center">
-  <img src="docs/Workflow.drawio.png" alt="System Architecture" width="800">
-  <br>
-  <em>Complete ETL pipeline architecture showing data flow from Marketo simulation to Snowflake</em>
-</div>
-
----
 
 ### **⚡ Live Data Streaming**
 <div align="center">
