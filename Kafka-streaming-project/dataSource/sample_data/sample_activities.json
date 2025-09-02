@@ -1,0 +1,29 @@
+[
+  {
+    "id": "activity-001",
+    "leadId": "550e8400-e29b-41d4-a716-446655440000",
+    "activityType": "Email Opened",
+    "activityDate": "2024-01-15T10:35:00Z",
+    "campaignId": "campaign-123",
+    "campaignName": "Q1 Product Launch",
+    "emailId": "email-456",
+    "emailSubject": "Introducing Our New Platform",
+    "score": 5
+  },
+  {
+    "id": "activity-002",
+    "leadId": "550e8400-e29b-41d4-a716-446655440000",
+    "activityType": "Web Page Visited",
+    "activityDate": "2024-01-15T10:40:00Z",
+    "webPageUrl": "https://company.com/products",
+    "score": 8
+  },
+  {
+    "id": "activity-003",
+    "leadId": "550e8400-e29b-41d4-a716-446655440001",
+    "activityType": "Downloaded Asset",
+    "activityDate": "2024-01-15T11:20:00Z",
+    "assetName": "Data Science Best Practices Whitepaper",
+    "score": 10
+  }
+]

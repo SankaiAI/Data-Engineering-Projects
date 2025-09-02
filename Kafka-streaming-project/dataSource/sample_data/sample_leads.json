@@ -1,0 +1,36 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "email": "john.smith@techcorp.com",
+    "firstName": "John",
+    "lastName": "Smith",
+    "company": "TechCorp",
+    "jobTitle": "VP of Engineering",
+    "industry": "Technology",
+    "leadSource": "Website",
+    "leadScore": 85,
+    "phone": "+1-555-123-4567",
+    "country": "US",
+    "state": "CA",
+    "city": "San Francisco",
+    "createdAt": "2024-01-15T10:30:00Z",
+    "updatedAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "email": "sarah.johnson@dataincorp.com",
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "company": "DataInc",
+    "jobTitle": "Data Scientist",
+    "industry": "Technology",
+    "leadSource": "Webinar",
+    "leadScore": 72,
+    "phone": "+1-555-987-6543",
+    "country": "US",
+    "state": "NY",
+    "city": "New York",
+    "createdAt": "2024-01-15T11:15:00Z",
+    "updatedAt": "2024-01-15T11:15:00Z"
+  }
+]

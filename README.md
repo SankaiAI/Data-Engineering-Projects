@@ -49,36 +49,84 @@ A comprehensive implementation of a modern data warehouse using the **Medallion 
 
 ---
 
+### 2. [Kafka Streaming Project](Kafka-streaming-project/)
+A modern **real-time ETL pipeline** that simulates streaming marketing data from Marketo to Snowflake using Apache Kafka with KRaft mode.
+
+**Key Features:**
+- **🔄 Real-time Streaming**: Apache Kafka with modern KRaft architecture (no ZooKeeper)
+- **📊 Data Lake**: MinIO (S3-compatible) for raw data storage with time-based partitioning
+- **⚡ Stream Processing**: Real-time data enrichment, scoring, and aggregation
+- **🏢 Enterprise Integration**: Snowflake data warehouse loading with batch processing
+- **🔍 Observability**: Confluent Control Center for monitoring and Redis for caching
+- **🏗️ Industry Architecture**: Lambda/Kappa architecture patterns used by major tech companies
+
+**Technologies:** Apache Kafka, Python, Docker, MinIO, Redis, Snowflake, Confluent Platform
+
+**Status:** ✅ Complete - Production Ready
+
+**Visual Evidence:**
+- 🎯 Real-time Kafka dashboard with live message flow
+- 📊 Data lake storage showing time-partitioned Parquet files  
+- 🏗️ Complete system architecture diagram
+- ⚡ Live streaming data processing in action
+
+---
+
 ## 🏗️ Repository Structure
 
 ```
 📁 Data Engineering Projects/
-├── 📁 data-warehouse-project/     # Medallion architecture data warehouse
-│   ├── 📁 docs/                   # Documentation and diagrams
-│   ├── 📁 Scripts/                # SQL implementation files
-│   │   ├── 📁 bronze/             # Bronze layer scripts
-│   │   ├── 📁 silver/             # Silver layer scripts
-│   │   └── 📁 gold/               # Gold layer scripts
-│   ├── 📁 source_crm/             # Sample CRM data
-│   ├── 📁 source_erp/             # Sample ERP data
-│   └── README.md                  # Detailed project documentation
-└── README.md                      # This file
+├── 📁 data-warehouse-project/        # Medallion architecture data warehouse
+│   ├── 📁 docs/                      # Documentation and diagrams
+│   ├── 📁 Scripts/                   # SQL implementation files
+│   │   ├── 📁 bronze/                # Bronze layer scripts
+│   │   ├── 📁 silver/                # Silver layer scripts
+│   │   └── 📁 gold/                  # Gold layer scripts
+│   ├── 📁 source_crm/                # Sample CRM data
+│   ├── 📁 source_erp/                # Sample ERP data
+│   └── README.md                     # Detailed project documentation
+├── 📁 Kafka-streaming-project/       # Real-time streaming ETL pipeline
+│   ├── 📁 dataSource/                # Simulated Marketo data generation
+│   ├── 📁 scripts/                   # ETL pipeline Python code
+│   │   ├── 📁 config/                # Configuration management
+│   │   ├── 📁 utils/                 # Shared utilities and validators
+│   │   ├── 📁 producers/             # Kafka data producers
+│   │   ├── 📁 processors/            # Stream processing components
+│   │   └── 📁 consumers/             # Data consumers (Snowflake)
+│   ├── 📁 docs/                      # Project documentation and screenshots
+│   ├── docker-compose.yml            # Kafka infrastructure setup
+│   ├── .env.example                  # Environment configuration template
+│   ├── .gitignore                    # Git ignore patterns for streaming project
+│   └── README.md                     # Detailed project documentation
+└── README.md                         # This file
 ```
 
 ---
 
 ## 🛠️ Technologies & Tools
 
-### **Databases:**
+### **Databases & Data Storage:**
 - Microsoft SQL Server
-- T-SQL
+- Snowflake Data Warehouse
+- MinIO (S3-compatible storage)
+- Redis (Caching & Session Management)
+
+### **Streaming & Processing:**
+- Apache Kafka (KRaft mode)
+- Confluent Platform (Schema Registry, Control Center)
+- Python (Pandas, Pydantic, Structured Logging)
+- Docker & Docker Compose
 
 ### **Architecture Patterns:**
 - Medallion Architecture (Bronze-Silver-Gold)
-- Dimensional Modeling
-- Star Schema Design
+- Lambda/Kappa Architecture (Real-time + Batch processing)
+- Dimensional Modeling & Star Schema Design
+- Event-Driven Architecture
 
-### **Documentation:**
+### **Development & Documentation:**
+- T-SQL for data warehouse processing
+- Python for stream processing and ETL
+- Git version control with project-specific .gitignore files
 - Draw.io for architecture diagrams
 - Markdown for technical documentation
 - Notion for project planning
@@ -87,13 +135,29 @@ A comprehensive implementation of a modern data warehouse using the **Medallion 
 
 ## 🎯 Skills Demonstrated
 
+### **Data Engineering Fundamentals:**
 - **Data Warehousing**: End-to-end implementation from source to analytics
-- **ETL/ELT Processes**: Data extraction, transformation, and loading
-- **Data Modeling**: Dimensional modeling and star schema design
+- **ETL/ELT Processes**: Both batch and real-time data processing pipelines
+- **Data Modeling**: Dimensional modeling, star schema, and streaming data structures
+- **Data Architecture**: Medallion and Lambda/Kappa architecture implementations
+
+### **Modern Streaming Technologies:**
+- **Real-time Processing**: Apache Kafka streaming with KRaft mode
+- **Stream Analytics**: Data enrichment, scoring, and real-time aggregations
+- **Event-Driven Architecture**: Producer-consumer patterns and message queues
+- **Data Lake Implementation**: S3-compatible storage with time-based partitioning
+
+### **Development & Operations:**
+- **Python Development**: Complex ETL pipelines with proper error handling
 - **SQL Development**: Complex T-SQL procedures and transformations
-- **Data Architecture**: Medallion architecture implementation
-- **Documentation**: Comprehensive technical and business documentation
-- **Best Practices**: Professional coding standards and documentation
+- **Containerization**: Docker and Docker Compose for infrastructure
+- **Data Validation**: Pydantic models for schema enforcement and data quality
+
+### **Enterprise Integration:**
+- **Cloud Data Warehouses**: Snowflake integration and batch loading
+- **Monitoring & Observability**: Confluent Control Center and structured logging
+- **Configuration Management**: Environment-based configuration and secrets
+- **Documentation**: Comprehensive technical and architectural documentation
 
 ---
 
