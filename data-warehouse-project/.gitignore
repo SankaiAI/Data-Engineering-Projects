@@ -1,0 +1,203 @@
+# Data Warehouse Project .gitignore
+
+# ==============================================================================
+# SQL Server Database Files
+# ==============================================================================
+*.mdf
+*.ldf
+*.ndf
+*.bak
+*.trn
+*.log
+
+# SQL Server temporary files
+*.tmp
+*.temp
+
+# SQL Server Management Studio temp files
+*.rptproj.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ==============================================================================
+# Data Files (Sensitive/Large)
+# ==============================================================================
+# Uncomment if you want to exclude data files from repository
+# *.csv
+# *.tsv
+# *.xlsx
+# *.xls
+# *.json
+# *.xml
+# *.parquet
+
+# Large data directories (uncomment if needed)
+# data/
+# datasets/
+# backups/
+
+# ==============================================================================
+# Development Environment Files
+# ==============================================================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Cursor IDE
+.cursor/
+
+# JetBrains IDEs
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# ==============================================================================
+# Operating System Files
+# ==============================================================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==============================================================================
+# Documentation and Diagram Files
+# ==============================================================================
+# Temporary Draw.io files
+*.drawio.bkp
+*.drawio.dtmp
+*.tmp.drawio
+
+# Microsoft Office temporary files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.tmp
+
+# ==============================================================================
+# Logs and Output Files
+# ==============================================================================
+logs/
+*.log
+*.out
+*.err
+
+# SQL execution results
+results/
+output/
+
+# ==============================================================================
+# Configuration Files (Sensitive)
+# ==============================================================================
+# Connection strings and passwords
+config.json
+appsettings.json
+appsettings.*.json
+.env
+.env.local
+.env.*.local
+
+# Database connection files
+connections.xml
+datasources.xml
+
+# ==============================================================================
+# Build and Deployment Artifacts
+# ==============================================================================
+build/
+dist/
+target/
+bin/
+obj/
+
+# Package files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ==============================================================================
+# Version Control
+# ==============================================================================
+.git/
+.svn/
+.hg/
+
+# ==============================================================================
+# Node.js (if using any Node-based tools)
+# ==============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ==============================================================================
+# Python (if using any Python ETL scripts)
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==============================================================================
+# Custom Project Exclusions
+# ==============================================================================
+# Add any project-specific files or directories you want to ignore
+# Example:
+# sensitive_data/
+# personal_notes.txt
+# draft_queries.sql
