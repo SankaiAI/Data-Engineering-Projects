@@ -124,6 +124,26 @@ docker-compose logs -f marketo-producer
 docker-compose logs -f stream-processor
 docker-compose logs -f data-lake-sink
 docker-compose logs -f snowflake-consumer
+
+# Check service status
+docker-compose ps
+```
+
+**🛑 Service Control Commands:**
+```bash
+# Stop all services when done
+docker-compose down
+
+# Stop specific service temporarily
+docker-compose stop marketo-producer  # Stops data generation
+docker-compose start marketo-producer  # Resumes data generation
+
+# Restart services with code changes
+docker-compose down
+docker-compose up -d --build
+
+# Stop and remove all containers, networks, and volumes (clean slate)
+docker-compose down -v
 ```
 
 **The system will automatically:**
