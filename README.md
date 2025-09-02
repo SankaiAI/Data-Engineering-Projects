@@ -49,7 +49,7 @@ A comprehensive implementation of a modern data warehouse using the **Medallion 
 
 ---
 
-### 2. [Kafka Streaming Project](Kafka-streaming-project/)
+### 2. [Kafka Streaming Project](Kafka-Marketo-S3-Snowflake-project/)
 A modern **real-time ETL pipeline** that simulates streaming marketing data from Marketo to Snowflake using Apache Kafka with KRaft mode.
 
 **Key Features:**
@@ -85,7 +85,7 @@ A modern **real-time ETL pipeline** that simulates streaming marketing data from
 │   ├── 📁 source_crm/                # Sample CRM data
 │   ├── 📁 source_erp/                # Sample ERP data
 │   └── README.md                     # Detailed project documentation
-├── 📁 Kafka-streaming-project/       # Real-time streaming ETL pipeline
+├── 📁 Kafka-Marketo-S3-Snowflake-project/  # Real-time streaming ETL pipeline
 │   ├── 📁 dataSource/                # Simulated Marketo data generation
 │   ├── 📁 scripts/                   # ETL pipeline Python code
 │   │   ├── 📁 config/                # Configuration management
