@@ -160,6 +160,84 @@ services:
     volumes:
       - redis-data:/data
 
+  # Python ETL Services - All automated!
+  marketo-producer:
+    build: .
+    container_name: marketo-producer
+    depends_on:
+      - kafka
+      - redis
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
+      - SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    command: python scripts/producers/marketo_producer.py
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    networks:
+      - default
+
+  stream-processor:
+    build: .
+    container_name: stream-processor
+    depends_on:
+      - kafka
+      - redis
+      - marketo-producer
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
+      - SCHEMA_REGISTRY_URL=http://schema-registry:8081
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    command: python scripts/processors/stream_processor.py
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    networks:
+      - default
+
+  data-lake-sink:
+    build: .
+    container_name: data-lake-sink
+    depends_on:
+      - kafka
+      - minio
+      - stream-processor
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
+      - MINIO_ENDPOINT=minio:9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+    command: python scripts/processors/data_lake_sink.py
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    networks:
+      - default
+
+  snowflake-consumer:
+    build: .
+    container_name: snowflake-consumer
+    depends_on:
+      - kafka
+      - data-lake-sink
+    environment:
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
+      - SNOWFLAKE_ACCOUNT=${SNOWFLAKE_ACCOUNT}
+      - SNOWFLAKE_USER=${SNOWFLAKE_USER}
+      - SNOWFLAKE_PASSWORD=${SNOWFLAKE_PASSWORD}
+      - SNOWFLAKE_WAREHOUSE=${SNOWFLAKE_WAREHOUSE}
+      - SNOWFLAKE_DATABASE=${SNOWFLAKE_DATABASE}
+      - SNOWFLAKE_SCHEMA=${SNOWFLAKE_SCHEMA}
+    command: python scripts/consumers/snowflake_consumer.py
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    networks:
+      - default
+
 volumes:
   kafka-data:
   minio-data:

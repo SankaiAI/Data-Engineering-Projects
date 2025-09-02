@@ -109,57 +109,54 @@ pip install -r requirements.txt
 cd ..
 ```
 
-### 4. Run the Pipeline
+### 4. Run the Complete Pipeline
 
-**Important**: Make sure your virtual environment is activated in each terminal:
+**🚀 One Command to Run Everything:**
 ```bash
-# Activate venv in each new terminal
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
+# Start all services automatically with proper dependencies
+docker-compose up -d --build
+
+# View logs from all services
+docker-compose logs -f
+
+# View specific service logs
+docker-compose logs -f marketo-producer
+docker-compose logs -f stream-processor
+docker-compose logs -f data-lake-sink
+docker-compose logs -f snowflake-consumer
 ```
 
-Open multiple terminals and run each component:
+**The system will automatically:**
+1. 🔄 Start Kafka infrastructure (broker, schema registry, control center)
+2. 🗄️ Initialize MinIO data lake and Redis cache
+3. 📊 Begin generating and streaming Marketo data
+4. ⚡ Process data in real-time with enrichment
+5. 💾 Store processed data in the data lake
+6. 🏢 Load final data into Snowflake
 
-**Terminal 1 - Start Kafka Producer:**
+**Manual Setup (Optional - for development):**
+
+If you prefer to run Python scripts locally for debugging:
+
 ```bash
-# Activate venv first!
+# Setup virtual environment first
+python -m venv venv
 venv\Scripts\activate  # Windows
 # source venv/bin/activate  # macOS/Linux
 
-cd scripts/producers
-python marketo_producer.py
-```
+# Install dependencies
+cd dataSource && pip install -r requirements.txt
+cd ../scripts && pip install -r requirements.txt
+cd ..
 
-**Terminal 2 - Start Stream Processor:**
-```bash
-# Activate venv first!
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # macOS/Linux
+# Run infrastructure only
+docker-compose up -d kafka schema-registry control-center minio redis
 
-cd scripts/processors
-python stream_processor.py
-```
-
-**Terminal 3 - Start Data Lake Sink:**
-```bash
-# Activate venv first!
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # macOS/Linux
-
-cd scripts/processors
-python data_lake_sink.py
-```
-
-**Terminal 4 - Start Snowflake Consumer:**
-```bash
-# Activate venv first!
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # macOS/Linux
-
-cd scripts/consumers
-python snowflake_consumer.py
+# Then run Python scripts manually in separate terminals
+python scripts/producers/marketo_producer.py
+python scripts/processors/stream_processor.py  
+python scripts/processors/data_lake_sink.py
+python scripts/consumers/snowflake_consumer.py
 ```
 
 ## ✨ Modern Kafka Architecture
