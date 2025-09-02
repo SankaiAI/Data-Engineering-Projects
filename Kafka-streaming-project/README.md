@@ -181,24 +181,47 @@ Modern:       Kafka Brokers with integrated controller (simple)
 
 ## 📸 System in Action
 
-The following screenshots show the pipeline processing real Marketo data in real-time:
+The following screenshots demonstrate the pipeline processing real Marketo data in real-time:
 
-### **ETL Workflow**
-![System Architecture](docs/Workflow.drawio.png)
+### **🏗️ ETL Workflow Architecture**
+<div align="center">
+  <img src="docs/Workflow.drawio.png" alt="System Architecture" width="800">
+  <br>
+  <em>Complete ETL pipeline architecture showing data flow from Marketo simulation to Snowflake</em>
+</div>
 
-### **Live Data Streaming**
-![Kafka Topics with Live Data](docs/all_topics_kafka_control_center.png)
-*Real-time Kafka topics showing streaming Marketo leads, activities, and opportunities data*
+---
 
-### **Data Lake Storage**
-![Data Lake Bucket Structure](docs/DataLake_bucket.png)
-*MinIO data lake with time-partitioned storage structure*
+### **⚡ Live Data Streaming**
+<div align="center">
+  <img src="docs/all_topics_kafka_control_center.png" alt="Kafka Topics with Live Data" width="900">
+  <br>
+  <em>Real-time Kafka Control Center showing active topics with streaming leads, activities, and opportunities data</em>
+</div>
 
-![Processed Leads in Parquet Format](docs/DataLake_leads_parquet.png)
-*Leads data stored as optimized Parquet files with proper partitioning*
+---
 
-![Processed Activities in Parquet Format](docs/DataLake_activities_parquet.png)
-*Activities data processed and stored in the data lake for analytics*
+### **📊 Data Lake Storage**
+
+**Bucket Organization:**
+<div align="center">
+  <img src="docs/DataLake_bucket.png" alt="Data Lake Bucket Structure" width="800">
+  <br>
+  <em>MinIO data lake with time-partitioned storage structure (year/month/day/hour)</em>
+</div>
+
+**Processed Data Files:**
+<div align="center">
+  <img src="docs/DataLake_leads_parquet.png" alt="Leads Data in Parquet Format" width="800">
+  <br>
+  <em>Leads data stored as optimized Parquet files with proper time-based partitioning</em>
+</div>
+
+<div align="center">
+  <img src="docs/DataLake_activities_parquet.png" alt="Activities Data in Parquet Format" width="800">
+  <br>
+  <em>Activities data processed and stored in the data lake ready for analytics</em>
+</div>
 
 ## 🔧 Configuration
 
@@ -236,50 +259,67 @@ The pipeline uses the following topics:
 
 ## 📊 Data Flow and Processing
 
-### 1. Data Generation
+### **1. Data Generation**
 - Simulates realistic Marketo data (leads, activities, opportunities)
-- Generates data with proper relationships and realistic distributions
+- Generates data with proper relationships and realistic distributions  
 - Configurable generation rate and data volume
+- Continuous batch generation every 5 seconds
 
-### 2. Stream Processing
+### **2. Stream Processing**
 - **Deduplication**: Uses Redis to prevent duplicate processing
 - **Data Enrichment**: Adds lead scoring, activity aggregation
 - **Real-time Analytics**: Calculates engagement metrics
 - **Data Validation**: Ensures data quality using Pydantic models
 
-### 3. Data Lake Storage
-- Stores raw data in Parquet format
+### **3. Data Lake Storage**
+- Stores raw data in optimized Parquet format
 - Implements time-based partitioning (year/month/day/hour)
-- Provides data lineage and historical preservation
+- Provides complete data lineage and historical preservation
+- S3-compatible storage for analytics workloads
 
-### 4. Data Warehouse Loading
-- Loads processed data into Snowflake
-- Creates optimized table structures
+### **4. Data Warehouse Loading**
+- Loads processed data into Snowflake tables
+- Creates optimized table structures for analytics
 - Implements upsert operations for data consistency
+- Batch processing for efficient warehouse loading
 
 ## 🔍 Monitoring and Observability
 
-### Kafka Control Center
-Access Confluent Control Center at: http://localhost:9021
-- Monitor topic throughput and lag
-- View consumer group status
+### **🎯 Kafka Control Center**
+Access Confluent Control Center at: **http://localhost:9021**
+
+**Features:**
+- Monitor topic throughput and message lag
+- View consumer group status and health
 - Manage connectors and schemas
+- Real-time cluster monitoring
 
-![Kafka Control Center - Topics Overview](docs/all_topics_kafka_control_center.png)
+<div align="center">
+  <img src="docs/all_topics_kafka_control_center.png" alt="Kafka Control Center Dashboard" width="900">
+  <br>
+  <em>Kafka Control Center showing live topic activity and message throughput</em>
+</div>
 
-### MinIO Console (Data Lake)
-Access MinIO console at: http://localhost:9001
+---
+
+### **🗄️ MinIO Console (Data Lake)**
+Access MinIO console at: **http://localhost:9001**
+
+**Login Credentials:**
 - Username: `minioadmin`
 - Password: `minioadmin`
-- Browse data lake contents
-- Monitor storage usage
 
-**Data Lake Structure:**
-![MinIO Data Lake - Bucket Overview](docs/DataLake_bucket.png)
+**Features:**
+- Browse data lake contents and file structure
+- Monitor storage usage and performance
+- Manage buckets and access policies
+- View time-partitioned data organization
 
-**Processed Data Files:**
-![Leads Data in Parquet Format](docs/DataLake_leads_parquet.png)
-![Activities Data in Parquet Format](docs/DataLake_activities_parquet.png)
+<div align="center">
+  <img src="docs/DataLake_bucket.png" alt="MinIO Data Lake Console" width="800">
+  <br>
+  <em>MinIO console showing organized data lake structure with time-based partitioning</em>
+</div>
 
 ### Log Monitoring
 All components use structured JSON logging:
